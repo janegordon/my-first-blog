@@ -4,12 +4,18 @@
     <title>Teacher Jeanne</title>
 </head>
 <body>
-    <div><h1>Bonjour :)</h1>
+ <div>
+    <h1>Teacher Jeanne!</h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>publié: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
-    
-    <br>
-    <h2>Qui suis-je?</h2>
-        <p><em>Prof</em> de FLE depuis un peu plus d'un an, je vis aux <a href="https://www.google.com/search?q=philippines&client=firefox-b-ab&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjMk6Tt-I_TAhVLr1QKHcaCAqkQ_AUICigD&biw=781&bih=613">Philippines</a> où j'enseigne <strong>ma langue maternelle</strong>.</p>
+{% endfor %}
+
 
 </body>
-</html>
+</html>f
